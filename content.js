@@ -11,5 +11,6 @@ chrome.storage.sync.get(window.defaultValues, function({exclude, include}) {
   if (includes.test(location) && !excludes.test(location)) {
     document.addEventListener('copy', allowCopyAndPaste, true);
     document.addEventListener('paste', allowCopyAndPaste, true);
+    document.addEventListener('beforeChange', allowCopyAndPaste, true);
   }
 });
